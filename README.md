@@ -1,6 +1,6 @@
 # Annie Fei — Portfolio Archive
 
-A local-first portfolio presented as a fixed, tactile A4 ring binder. It is not connected to GitHub or a publishing target.
+A portfolio presented as a fixed, tactile A4 ring binder. The source is maintained in the `AnnieFei/aFolio` GitHub repository and remains easy to edit locally.
 
 ## Edit content
 
