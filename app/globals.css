@@ -108,3 +108,13 @@ body{font-family:var(--body);font-weight:500}
 .room-light{z-index:3;top:-1rem;left:var(--lamp-x);width:min(56vw,720px);height:min(56vw,720px);transform:translateX(-50%);clip-path:none;mask-image:none;background:radial-gradient(circle at 50% 50%,rgba(255,211,123,.48) 0,rgba(255,199,91,.3) 24%,rgba(255,187,65,.13) 48%,rgba(255,179,48,.035) 68%,transparent 84%);opacity:.98;filter:blur(22px);mix-blend-mode:screen}
 .closing-cover::before{display:none}
 @media(max-width:700px){.lamp-rig{top:-7.4rem;width:78vw;height:15rem}.room-light{top:-.5rem;width:78vw;height:78vw;filter:blur(17px)}}
+
+/* Final back cover: the last turn settles into the same closed plastic binder. */
+.closing-scene{perspective:1800px;pointer-events:auto}
+.closing-cover{isolation:isolate;overflow:visible;animation:close-cover-settle .42s cubic-bezier(.22,.7,.3,1) both;transform-origin:left center}
+.closing-cover h2{position:relative;z-index:4;margin:0}
+.closing-hardware{position:absolute;z-index:8;right:-15%;top:14%;width:29%;height:72%;object-fit:contain;object-position:center;border:0;filter:drop-shadow(0 5px 5px rgba(0,0,0,.28));transform:scaleX(-1)}
+.closing-plastic-sheet{position:absolute;z-index:12;inset:calc(var(--jacket-overhang) * -1);pointer-events:none;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.38);box-shadow:inset 0 0 18px rgba(255,255,255,.2),0 5px 12px rgba(0,0,0,.08);backdrop-filter:blur(.25px)}
+@keyframes close-cover-settle{from{opacity:.72;transform:translateX(18%) rotateY(-9deg) translateZ(8px)}to{opacity:1;transform:translateX(0) rotateY(0) translateZ(0)}}
+@media(max-width:850px){.closing-hardware{right:-13%;width:27%}}
+@media(prefers-reduced-motion:reduce){.closing-cover{animation:none}}
